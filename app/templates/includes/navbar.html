@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <h1 class="navbar-brand" >ROCK ON  {{session.user.first_name}} {{session.user.last_name}}</h1>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item me-4 d-flex align-items-center">
+                    <a href="{{url_for('user', id = session.user.id)}}" >My BANDS</a>
+                </li>
+                <li class="nav-item me-4 d-flex align-items-center">
+                    <a href="{{url_for('band')}}" >NEW BAND</a>
+                </li>
+                <li class="nav-item me-4 d-flex align-items-center">
+                    <a href="{{url_for('logout')}}" class="btn btn-primary" >Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
